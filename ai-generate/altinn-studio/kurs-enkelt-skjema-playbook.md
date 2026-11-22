@@ -261,8 +261,9 @@ Disse temaene hører hjemme i senere moduler eller i referansedokumentasjonen. N
 - **Språk:** Bokmål, klarspråk, du-form. Følg skrivereglene i altinn-studio-docs.
 - **Struktur:** Hver del har en kort forklaring av konseptet først og deretter nummererte steg. Navn på knapper, menyer og
   felter i grensesnittet skrives i **fet** skrift og nøyaktig slik de står i Studio.
-- **Presentasjon:** Artikkelen brukes også som lysbilder med Marp. Behold Marp-innstillingene i front matter. Bruk `---`
-  for å dele opp i lysbilder, slik at hvert lysbilde har enten tekst eller ett skjermbilde.
+- **Presentasjon:** Presentasjonen lages som en egen fil med Slidev, etter
+  [oppskriften for presentasjonen](kurs-enkelt-skjema-presentasjon-oppskrift.md). Kursartikkelen trenger derfor ikke
+  Marp-innstillinger. Skjermbildene brukes både i artikkelen og i presentasjonen.
 - **Skjermbilder:** Ett skjermbilde per vesentlig steg eller resultat, minst disse:
   1. opprett ny app
   2. oversiktssiden, før og etter ny tittel
