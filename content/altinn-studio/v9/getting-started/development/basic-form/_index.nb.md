@@ -1,288 +1,325 @@
 ---
 title: Lage et enkelt skjema
 linktitle: Lage et enkelt skjema
-description: Slik lager du et enkelt skjema i Altinn Studio.
+description: Slik lager du et enkelt skjema i Altinn Studio, fra ny app til ferdig skjema.
 weight: 1
-
-# Marp settings - used for generating a HTML/PDF presentation that can be used in live training sessions.
-marp: true
-headingDivider: 4
-style: |
-  section {
-    color: #393b51
-  }
-header: 'Lage et enkelt skjema'
-footer: 'Altinn Studio - kom i gang'
-# End of Marp settings
 ---
 
-### Opprett en ny app
+I dette kurset lager du din første app i Altinn Studio. Du starter med en tom app og ender med et skjema med to sider.
+Senere kurs i serien bygger videre på appen du lager her.
 
-1. Klikk på **Opprett ny app** for å lage en ny app som skal inneholde skjemaet.
-2. Velg organisasjonen din som eier av appen hvis du er tilknyttet en organisasjon.
-3. Skriv inn et navn som identifiserer appen.
-   >*Navnet må være unikt i organisasjonen din. Altinn Studio bruker det også i URL-en til tjenesten når den er publisert.*
-4. Klikk på **Opprett app** og vent til appen er opprettet.
+Etter kurset kan du
 
----
+- opprette en app og endre informasjonen om den
+- dele endringene dine, slik at andre kan se dem og du kan publisere dem
+- bygge en side med bilde og tekst
+- lage en enkel datamodell
+- bygge en skjemaside med felter som er koblet til datamodellen
 
-![Opprett ny app](./Kurs-skjermbilder-Oppgave-Lag-ny-app.jpg)
+## Dette skal du lage
 
-### Redigere informasjon om tjenesten
+Sogndal kommune vil ønske nye innbyggere velkommen og samtidig samle inn noen opplysninger om dem. Når noen melder
+flytting til kommunen, skal de få et enkelt skjema i Altinn.
 
-Når appen er opprettet og lastet inn, kommer du til en oversiktsside for appen. Her ser du dette:
+Skjemaet har to sider:
 
-- **Menylinjen**: Her går du til de ulike verktøyene og åpner siden for innstillinger.
-- **Appens tittel**: Brukeren ser tittelen når de er inne i appen, og i innboksen i Altinn.
-- **Tilgjengelige miljøer**: Her ser du hvilke miljøer organisasjonen din kan publisere apper til. Vanligvis er det et testmiljø (TT02) og et produksjonsmiljø.
-  >*Hvis du har laget appen på din egen bruker og ikke på en organisasjon, har du ingen tilgjengelige miljøer.*
-- **Lenke til dokumentasjonen**: Her kommer du til dokumentasjonen for Altinn Studio.
-- **Nyheter**: Her publiserer vi informasjon om ny funksjonalitet fortløpende.
+1. En velkomstside med logoen til kommunen og en kort velkomsttekst.
+2. En side der innflytteren fyller ut opplysninger om seg selv og sender inn skjemaet.
 
----
+Du er tjenesteutvikler i kommunen. Underveis i kurset får du en bestilling fra kommunen, og den skal du gjøre om til en
+datamodell og et skjema.
 
-![Oversiktssiden](./Kurs-skjermbilder-Konsept-Oversikt-i-appen.jpg)
+## Opprett en ny app
 
+1. Klikk på **Opprett ny app** på dashbordet.
+2. Under **Eier** velger du organisasjonen din.
+   >*Hvis du lager appen på din egen bruker, kan du ikke publisere den til et testmiljø senere.*
+3. Skriv inn et navn under **Navn**, for eksempel `velkommen-til-sogndal`.
+   >*Navnet må være unikt i organisasjonen din. Altinn Studio bruker det også i nettadressen til tjenesten når den er
+   publisert. Du kan ikke endre navnet senere.*
+4. Under **Velg appversjon** velger du **Altinn App v9 (preview)**. Dette kurset er skrevet for apper på versjon 9.
+5. Klikk på **Opprett app** og vent til appen er opprettet.
 
-#### Endre informasjon om appen
-1. Klikk på **Innstillinger** i menylinjen.
-2. Skriv inn tittelen på appen. Velg en beskrivende overskrift.
-3. Skriv inn en beskrivelse av appen. Hvem skal bruke den, og hva skal de bruke den til?
-4. Klikk på **Lagre** for å lagre endringene.
-5. Gå tilbake til oversikten ved å klikke på **Til hjem** i menylinjen.
+![Skjemaet Opprett ny app med eier, navn og appversjon utfylt](./opprett-app.png "Opprett ny app")
 
----
+## Endre informasjonen om appen
 
-![Endre tittel på appen](./Kurs-skjermbilder-Oppgave-Endre-tittel-på-appen.jpg)
+Når appen er opprettet, kommer du til oversiktssiden for appen. Her ser du dette:
 
----
+- **Menylinjen**: Her går du til verktøyene, som **Utforming**, **Datamodell** og **Språk**. Under menylinjen finner du
+  blant annet **Innstillinger**, **Forhåndsvis** og **Del dine endringer**.
+- **Appens tittel**: Brukeren ser tittelen inne i appen og i innboksen i Altinn. Til å begynne med er tittelen det
+  samme som navnet på appen.
+- **Miljøer**: Her ser du hvilke miljøer organisasjonen din kan publisere apper til, for eksempel testmiljøet TT02 og
+  produksjonsmiljøet.
+- **Kom i gang**: Her finner du dokumentasjonen for Altinn Studio.
+- **Nyheter**: Her publiserer vi informasjon om ny funksjonalitet.
 
-Legg inn tittelen på appen både på bokmål og nynorsk.
+![Oversiktssiden for en ny app](./oversikt.png "Oversiktssiden")
 
-Når du kommer tilbake til oversiktssiden, ser du at tittelen er oppdatert der også.
+### Se hva som mangler
 
-![bg right:60% contain](./Kurs-skjermbilder-Konsept-Oversikt-i-appen-med-tittel.jpg)
+Ved siden av **Hent endringer** står det et varselsymbol med et tall. Tallet viser hvor mange feil og advarsler appen
+har. Klikk på symbolet for å åpne **Valideringsfeil og advarsler**.
 
-### Lagre og dele endringer
+En ny app mangler navn på nynorsk, beskrivelse og kontaktinformasjon. Du må rette opp feilene før du kan publisere
+appen. Advarslene kan du se bort fra i dette kurset. Klikk på en feil for å gå rett til stedet der du retter den.
 
-Når du jobber med en app i Altinn Studio, er det to hovedområder:
+![Dialogen Valideringsfeil og advarsler for en ny app](./valideringsfeil.png "Valideringsfeil og advarsler")
 
-- **Ditt eget område**: Altinn Studio lagrer alle endringer du gjør i appen her automatisk. Andre kan ikke se disse endringene.
-- **Appens sentrale område**: Dette området er tilgjengelig for alle. Når du publiserer tjenesten, bruker Altinn Studio
-  dette området som utgangspunkt.
+### Legg inn navn, beskrivelse og kontaktinformasjon
 
-Du må dele endringene fra ditt eget område til appens sentrale område før du kan publisere dem.
+1. Klikk på **Innstillinger** under menylinjen. Fanen **Om appen** åpnes.
+2. Under **Navn på appen** skriver du inn et navn som brukerne forstår, for eksempel «Velkommen til Sogndal kommune».
+   Klikk på fanen **Nynorsk** og skriv inn navnet på nynorsk, for eksempel «Velkomen til Sogndal kommune».
+3. Under **Kort beskrivelse av appen** beskriver du hvem som skal bruke appen, og hva de skal bruke den til. Skriv
+   beskrivelsen både på **Bokmål** og **Nynorsk**.
+4. Under **Legg til kontaktinformasjon** klikker du på **Legg til ny kontakt**. Fyll ut **E-postadresse** og
+   **Tittel som beskriver hva det gjelder**, for eksempel «Kontakt kommunen», og klikk på **Lagre**.
+5. Klikk på **Lagre** nederst på siden.
+6. Klikk på **Til Hjem** for å gå tilbake til oversikten.
 
----
+![Fanen Om appen med navn på nynorsk og kort beskrivelse på bokmål](./innstillinger.png "Om appen")
 
-![Lagre og dele endringer](./Kurs-skjermbilder-Konsept-Endringer-og-lagring.jpg)
+Tittelen på oversiktssiden er nå oppdatert. Varselsymbolet viser bare advarslene om at navn og beskrivelse mangler på
+engelsk. Da bruker Altinn Studio teksten på bokmål.
 
----
+![Oversiktssiden med den nye tittelen](./oversikt-med-tittel.png "Oversiktssiden med ny tittel")
 
-Nå som du har endret tittelen på appen, kan du dele endringen til appens sentrale område.
-1. Klikk på **Del dine endringer** i menylinjen.
-2. Klikk på **Se siste endringer** for å se en oversikt over endringene du har gjort.
-3. Se gjennom endringene, og klikk på **X** for å lukke vinduet og gå tilbake til vinduet for å dele endringer.
-4. Beskriv endringene i tekstboksen og klikk på **Del endringer**.
+## Lagre og dele endringer
 
----
-![Dele endringer](./Kurs-skjermbilder-Oppgave-Del-endringer.jpg)
+Når du jobber med en app i Altinn Studio, er det to områder:
 
-### Lage en informasjonsside
-Du starter med å lage en informasjonsside med et bilde og en tekst.
+- **Ditt eget område**: Altinn Studio lagrer alle endringene dine her automatisk. Det er bare du som ser dem.
+- **Appens sentrale område**: Alle som jobber med appen, ser endringene her. Når du publiserer appen, bygger Altinn
+  Studio den herfra.
 
-#### Åpne Utforming
-1. Klikk på **Utforming** i toppmenyen.
-2. Klikk på **Utform** på kortet for oppgaven "Task_1" for å utforme den første delen av skjemaet.
+Du må dele endringene dine til appens sentrale område før du kan publisere dem. Når du har endringer du ikke har delt,
+står det en rød prikk ved **Del dine endringer**.
 
-#### Slik er Utforming-siden bygd opp
-Utforming-siden har fire kolonner:
+![Altinn Studio lagrer endringene i ditt eget område, og du deler dem til appens sentrale område](./lagre-og-dele.png "Eget område og appens sentrale område")
 
-- **Komponentlisten**: Her finner du komponentene du kan legge til. Du kan lukke denne kolonnen.
-- **Oppsett**: Her legger du inn sider og komponenter i skjemaet.
-- **Konfigurasjonskolonnen**: Her setter du opp siden eller komponenten du har valgt.
-- **Forhåndsvisningen**: Her ser du det du har satt opp.
+### Del endringene
 
----
+1. Klikk på **Del dine endringer** under menylinjen.
+2. Vil du se hva du har endret, klikker du på **Se siste endringer**. Lukk vinduet når du er ferdig.
+3. Beskriv endringene under **Beskriv endringene som er gjort**, for eksempel «La inn navn, beskrivelse og
+   kontaktinformasjon for appen».
+4. Klikk på **Del endringer**.
 
-![Utforming-siden](./Kurs-skjermbilder-Konsept-Utforming.jpg)
+![Vinduet for å beskrive og dele endringer](./del-endringer.png "Del endringer")
 
-#### Legg til komponenter på infosiden
-1. Åpne siden **Side1** ved å klikke på den, og klikk på **Legg til komponent**.
-2. Klikk på **Vis alle**, søk etter "Bilde" og klikk på komponenten **Bilde** under **Informasjon**. Klikk på **Legg til** i
-  høyrepanelet for å legge til bildekomponenten på siden.
-3. Under **Valg for bilde** i konfigurasjonskolonnen klikker du på **Lim inn en URL** og limer inn denne adressen:
-   https://docs.altinn.studio/nb/altinn-studio/v8/getting-started/app-dev-course/resources/kommune-logo.png
-4. Legg til komponenten **Avsnitt** på siden.
-5. Skriv inn en tekst under **Ledetekst**, for eksempel "Vi har registrert at du har meldt flytting til Sogndal kommune - velkommen til oss!".
+## Lage velkomstsiden
 
----
+Du starter med velkomstsiden. Den skal ha logoen til kommunen og en kort velkomsttekst.
 
-![Legg til bildekomponent](./Kurs-skjermbilder-Oppgave-infoside-bilde-leggtil.jpg)
+### Åpne Utforming
 
----
+1. Klikk på **Utforming** i menylinjen.
+2. Klikk på **Utform** på kortet for oppgaven **Task_1**. Oppgaven er utfyllingsoppgaven, der brukeren fyller ut
+   skjemaet.
+3. Slå på bryteren **Prøv nytt design** øverst til høyre. Dette kurset bruker det nye designet for å legge til
+   komponenter.
 
-![Legg til avsnitt](./Kurs-skjermbilder-Oppgave-infoside-avsnitt-leggtil.jpg)
+![Utforming med kortet for oppgaven Task_1](./utforming-oppgaver.png "Oppgavene i Utforming")
 
----
+Utforming har tre kolonner:
 
-![Infoside - resultat](./Kurs-skjermbilder-Oppgave-infoside-resultat.jpg)
+- **Oppsett**: Her legger du til sider og komponenter i skjemaet.
+- **Innstillinger**: Her setter du opp siden eller komponenten du har valgt.
+- **Forhåndsvisning**: Her ser du hvordan siden ser ut for brukeren.
 
-### Sette opp datamodellen
-En datamodell er en slags innholdsfortegnelse for skjemaet. Med datamodellen bestemmer du _hva_ du vil hente inn av data,
-og _hvordan_ dataene skal se ut.
+{{% notice info %}}
+Forhåndsvisningen i Altinn Studio er midlertidig skrudd av. Du ser bare en melding om dette i stedet for skjemaet.
+{{% /notice %}}
 
-For et enkelt skjema er det ofte en direkte kobling mellom et felt i datamodellen og et felt i skjemaet. For mer avanserte
-skjemaer kan datamodellen og skjemaet være ganske forskjellige.
+![Utforming med det nye designet slått på](./utforming.png "Utforming")
 
-Når du oppretter en app, følger det med en enkel datamodell med noen eksempelfelter. Du kan endre navnene på feltene
-slik at det er tydelig hva de inneholder, og du kan legge til egne felter.
+### Legg til et bilde
 
-Gå til **Datamodell** i toppmenyen for å komme i gang.
+1. Klikk på siden **Side1** for å åpne den, og klikk på **Legg til komponent**.
+   Du ser en liste med de vanligste komponentene.
+
+   ![Listen med de vanligste komponentene](./legg-til-komponent.png "Legg til komponent")
+
+2. Bilde står ikke i listen. Klikk på **Vis alle** og søk etter «Bilde».
+3. Klikk på **Bilde** under **Informasjon**, og klikk på **Legg til**.
+
+   ![Dialogen Velg komponent med Bilde valgt](./vis-alle-bilde.png "Velg komponent")
+
+4. Under **Valg for bilde** klikker du på fanen **Lim inn en URL**. Klikk på **Lim inn bildeadressen (URL-en)** og lim
+   inn denne adressen:
+   https://docs.altinn.studio/nb/altinn-studio/v9/getting-started/development/basic-form/kommune-logo.png
+5. Klikk utenfor feltet for å lagre adressen.
+
+![Bildekomponenten med adressen til logoen](./bilde-url.png "Lim inn en URL")
+
+### Legg til et avsnitt
+
+1. Hold musepekeren rett under komponenten **Bilde** i **Oppsett**. Det dukker opp en **+**-knapp.
+2. Klikk på **+** og velg **Avsnitt**.
+
+   ![Plussknappen Ny komponent under bildet](./ny-komponent-pluss.png "Ny komponent")
+
+3. Klikk på **Ledetekst** under innstillingene for avsnittet.
+4. Skriv inn velkomstteksten under **Skriv tekst**, for eksempel «Vi har registrert at du har meldt flytting til
+   Sogndal kommune - velkommen til oss!».
+5. Klikk på **Lagre**.
+
+![Ledeteksten til avsnittet](./avsnitt.png "Legg inn tekst i avsnittet")
+
+Velkomstsiden har nå et bilde og et avsnitt. I **Oppsett** ser du teksten i avsnittet.
+
+![Velkomstsiden i Oppsett med bilde og avsnitt](./infoside-resultat.png "Den ferdige velkomstsiden")
+
+## Sette opp datamodellen
+
+En datamodell er en slags innholdsfortegnelse for skjemaet. Med datamodellen bestemmer du _hva_ du vil hente inn av
+data, og _hvordan_ dataene skal se ut.
+
+For et enkelt skjema er det ofte en direkte kobling mellom et felt i datamodellen og et felt i skjemaet. For mer
+avanserte skjemaer kan datamodellen og skjemaet være ganske forskjellige.
+
+Når du oppretter en app, følger det med en datamodell som heter `model`, med noen eksempelfelter. Du kan slette
+feltene, gi dem nye navn og legge til egne felter.
 
 Du kan lese mer i [veiledningen om datamodellering i Altinn Studio]({{< relref "/altinn-studio/v9/develop-a-service/reference/data/data-modeling" >}}).
 
----
+### Krav fra kommunen
 
-![Datamodell-siden h:620px](./Kurs-skjermbilder-Konsept-Datamodell.jpg)
-
-
-#### Krav fra kommunen
 Kommunen vil i første omgang samle inn disse opplysningene om innflyttere:
 
-- **Personinformasjon**
-  - fullt navn
-  - alder
-- **Adresse**
-  - gateadresse
-  - postnummer
-  - poststed
-- **Kontaktinformasjon**
-  - e-postadresse
-  - telefon
+- **Personinformasjon**: fullt navn og alder
+- **Adresse**: gateadresse, postnummer og poststed
+- **Kontaktinformasjon**: e-postadresse og telefon
 
-#### Lag datamodellen
-1. Sjekk at modellen `model` er valgt. Slett de eksisterende feltene i modellen ved å klikke på søppelbøtteikonet (🗑️) ved siden av feltet.
-2. Klikk på **Legg til** øverst på siden og velg **Objekt**.
-3. Endre navnet på den nye gruppen til "person".
-4. Klikk på **Legg til felt** i gruppen `person` og velg **Tekst**.
-5. Endre navnet på feltet til `fullt_navn`.
+Du skal lage en gruppe for hver av de tre typene opplysninger. I datamodellen er en gruppe et objekt. Lag denne
+datamodellen:
 
----
+| Gruppe (objekt) | Felt          | Type    |
+|-----------------|---------------|---------|
+| `person`        | `fullt_navn`  | Tekst   |
+| `person`        | `alder`       | Heltall |
+| `adresse`       | `gateadresse` | Tekst   |
+| `adresse`       | `postnummer`  | Tekst   |
+| `adresse`       | `poststed`    | Tekst   |
+| `kontaktinfo`   | `epost`       | Tekst   |
+| `kontaktinfo`   | `telefon`     | Tekst   |
 
-![Lage datamodellen](./Kurs-skjermbilder%20-%20Oppgave-Datamodell.jpg)
+### Lag datamodellen
 
----
+1. Klikk på **Datamodell** i menylinjen. Sjekk at datamodellen `model` er valgt.
 
-Fortsett å legge til felter i datamodellen. Du skal ha tre grupper (`object`) med tilhørende felter.
-Bruk feltene i kravene fra kommunen som utgangspunkt. Alle feltene kan være av typen **Tekst**, bortsett fra feltet
-`alder`, som kan være et heltall.
+   ![Datamodell-siden med eksempelfeltene](./datamodell.png "Datamodell")
 
-Når du er ferdig med datamodellen, klikker du på **Generer modeller** for å lage alle modellfilene appen trenger.
+2. Slett eksempelfeltene. Hold musepekeren over feltet, klikk på søppelbøtteikonet og bekreft at du vil slette feltet.
 
-![bg right:40% contain](./Kurs-skjermbilder%20-%20Oppgave-Datamodell-2-resultat.jpg?width=300 "Resultat")
+   ![Søppelbøtteikonet ved siden av et felt i datamodellen](./datamodell-slett.png "Slett et felt")
 
----
+3. Klikk på **Legg til** øverst og velg **Objekt**.
+4. Under **Egenskaper** til høyre endrer du **Navn** til `person`.
+5. Klikk på **Legg til felt** ved siden av gruppen `person` og velg **Legg til tekst**.
 
-![Generer modeller](./Kurs-skjermbilder%20-%20Oppgave-Datamodell-generer-modeller.jpg)
+   ![Menyen Legg til felt for gruppen person](./datamodell-legg-til-felt.png "Legg til felt")
 
-#### Dele endringene
+6. Endre **Navn** på det nye feltet til `fullt_navn`.
+7. Legg til resten av gruppene og feltene fra tabellen på samme måte. Feltet `alder` legger du til med
+   **Legg til heltall**.
+8. Klikk på **Generer modell**. Altinn Studio lager filene appen trenger for datamodellen, og viser en melding når det
+   er gjort.
 
-![Del endringene](./Kurs-skjermbilder%20-%20Oppgave-Del-endringer-basic.jpg)
+![Den ferdige datamodellen med gruppene person, adresse og kontaktinfo](./datamodell-ferdig.png "Den ferdige datamodellen")
 
-### Utforme skjemaet
+### Dele endringene
 
-Nå skal du bygge opp skjemaet. Du gjør det nesten på samme måte som da du laget infosiden.
+Del endringene dine på samme måte som tidligere. Klikk på **Del dine endringer**, beskriv endringene og klikk på
+**Del endringer**.
 
-Gå til **Utforming** i toppmenyen, og klikk på **Utform** på kortet for oppgaven "Task_1".
+## Utforme skjemasiden
 
-#### Lag en ny side
-1. Klikk på **Legg til ny side**. Altinn Studio legger til en ny side med navnet "Side2".
-2. Klikk på **Side-ID** i konfigurasjonskolonnen og endre navnet på siden til "om-innflytter". Klikk på **✓** for å lagre.
-3. Klikk på **Visningsnavn** og legg inn en visningstekst for siden, for eksempel "Om innflytter". Klikk på **Lagre**.
+Nå skal du bygge selve skjemaet. Du gjør det nesten på samme måte som da du laget velkomstsiden.
 
-Altinn Studio legger automatisk til komponenten **Navigasjonsknapper** på sidene, slik at brukeren kan bla mellom sidene med
-knappene **Neste** og **Forrige**.
+Klikk på **Utforming** i menylinjen, og klikk på **Utform** på kortet for oppgaven **Task_1**.
 
----
+### Lag en ny side
 
-![Lag en ny side](./Kurs-skjermbilder-Oppgave-Ny-side.jpg)
+1. Klikk på **Legg til ny side**. Altinn Studio legger til en ny side som heter «Side2».
+2. Klikk på **Side-ID** under innstillingene for siden, og endre den til `om-innflytter`. Klikk på **Lagre**.
+3. Klikk på **Visningsnavn** og skriv inn «Om innflytter» under **Skriv tekst**. Klikk på **Lagre**.
 
-#### Legge til den første skjemakomponenten
-Den første komponenten skal samle inn navnet til innflytteren. Til det bruker du komponenten **Lite tekstfelt**, som lar
-brukeren skrive inn en kort tekst på én linje.
+Altinn Studio legger automatisk til komponenten **Navigasjonsknapper** på begge sidene. Da kan brukeren bla mellom
+sidene med knappene **Neste** og **Forrige**.
 
-1. Sjekk at du er på siden **Om innflytter**. Klikk på **Legg til komponent** inne på siden.
-2. Velg **Lite tekstfelt** fra komponentlisten.
+![Den nye siden med side-ID og visningsnavn](./ny-side.png "Lag en ny side")
 
-Komponenten er nå lagt til på siden. Den mangler foreløpig en ledetekst og en kobling til datamodellen, og
-forhåndsvisningen viser en feilmelding til du har valgt et datamodellfelt for komponenten.
+### Legge til det første skjemafeltet
 
----
+Det første feltet skal samle inn navnet til innflytteren. Til det bruker du komponenten **Lite tekstfelt**, der brukeren
+skriver inn en kort tekst på én linje.
 
-![Legg til komponent](./Kurs-skjermbilder-Oppgave-Legg-til-komponent.jpg)
+1. Sjekk at siden **om-innflytter** er åpen, og klikk på **Legg til komponent**.
+2. Klikk på **Lite tekstfelt**.
 
-#### Legge inn ledetekst
-Ledeteksten er teksten som står over feltet og forteller brukeren hva de skal fylle inn.
+Komponenten står nå på siden, foran navigasjonsknappene. Den mangler en ledetekst og en kobling til datamodellen.
 
-Altinn Studio lagrer alle tekstene i appen i en egen tekstfil, og hver tekst får en unik ID. Komponenten peker på tekstens
-ID, ikke på selve teksten. Det gjør at du kan bruke samme tekst flere steder, endre teksten uten å endre komponenten og
-oversette teksten til nynorsk og engelsk under **Språk** i toppmenyen.
+![Komponenten Lite tekstfelt på siden om-innflytter](./legg-til-tekstfelt.png "Lite tekstfelt")
 
-1. Sjekk at komponenten **Lite tekstfelt** er valgt. Klikk på **Ledetekst** i konfigurasjonskolonnen.
-2. Skriv "Fullt navn" i tekstfeltet under **Skriv tekst**. Altinn Studio lager en ID for teksten automatisk.
+### Legge inn ledeteksten
+
+Ledeteksten står over feltet og forteller brukeren hva de skal fylle inn.
+
+Altinn Studio lagrer alle tekstene i appen i en egen tekstfil, og hver tekst får en unik ID. Komponenten peker på
+ID-en, ikke på selve teksten. Derfor kan du bruke samme tekst flere steder, endre teksten uten å endre komponenten og
+oversette teksten til nynorsk og engelsk under **Språk** i menylinjen.
+
+1. Sjekk at komponenten **Lite tekstfelt** er valgt, og klikk på **Ledetekst**.
+2. Skriv «Fullt navn» under **Skriv tekst**. Altinn Studio lager ID-en for teksten automatisk.
 3. Klikk på **Lagre**.
 
-Vil du bruke en tekst som allerede finnes i appen, kan du klikke på **Søk** og velge teksten fra listen i stedet for å
-skrive en ny.
+Vil du bruke en tekst som allerede finnes i appen, klikker du på **Søk** og velger teksten fra listen.
 
----
+![Ledeteksten Fullt navn med ID-en Altinn Studio har laget](./ledetekst.png "Legg inn ledetekst")
 
-![Legg inn ledetekst](./Kurs-skjermbilder-Oppgave-Ledetekst.jpg)
+### Knytte feltet til datamodellen
 
-#### Knytte feltet til datamodellen
 Når brukeren fyller ut skjemaet, må appen lagre svaret et sted. Det er datamodellen som bestemmer hvor. Du knytter hvert
-skjemafelt til et felt i datamodellen, slik at svaret brukeren skriver inn havner i riktig felt. Navnet til innflytteren
-skal havne i feltet `fullt_navn` i gruppen `person`.
+skjemafelt til et felt i datamodellen, slik at svaret havner på riktig sted. Navnet til innflytteren skal havne i feltet
+`fullt_navn` i gruppen `person`.
 
-1. Klikk på **Velg datamodellfelt for Lite tekstfelt** i konfigurasjonskolonnen.
-2. Under **Datamodell** er datamodellen `model` allerede valgt. Under **Datamodellfelt** velger du `person.fullt_navn`.
+1. Klikk på **Velg datamodellfelt for Lite tekstfelt**.
+2. Under **Datamodell** er `model` allerede valgt. Under **Datamodellfelt** velger du `person.fullt_navn`.
 3. Klikk på **Lagre**.
 
-Feilmeldingen i forhåndsvisningen forsvinner, og du ser feltet med ledeteksten "Fullt navn".
+![Feltet koblet til person.fullt_navn i datamodellen](./datamodellfelt.png "Velg datamodellfelt")
 
----
-
-![Knytt feltet til datamodellen](./Kurs-skjermbilder-Oppgave-Datamodellfelt.jpg)
-
----
+I **Oppsett** heter komponenten nå «Fullt navn».
 
 {{% expandlarge id="name-field-code" header="Slik ser navnefeltet ut i filene til appen" %}}
-Altinn Studio lagrer oppsettet du har laget i filer i appen. Komponenten står i layoutfilen for siden. `textResourceBindings`
-viser hvilken tekst komponenten bruker som ledetekst (`title`), og `dataModelBindings` viser hvilket felt i datamodellen
-appen lagrer svaret i.
+Altinn Studio lagrer oppsettet du har laget, i filer i appen. Komponenten står i layoutfilen for siden.
+`textResourceBindings` viser hvilken tekst komponenten bruker som ledetekst (`title`), og `dataModelBindings` viser
+hvilket felt i datamodellen appen lagrer svaret i.
 
 {{< code-title >}}
-App/ui/{taskId}/layouts/om-innflytter.json
+App/ui/Task_1/layouts/om-innflytter.json
 {{< /code-title >}}
 
 ```json
 {
-  "id": "Input-ECYekc",
-  "type": "Input",
-  "textResourceBindings": {
-    "title": "om-innflytter.Input-ECYekc.title.wu6n"
-  },
   "dataModelBindings": {
     "simpleBinding": {
       "field": "person.fullt_navn",
       "dataType": "model"
     }
+  },
+  "id": "Input-eCPH9O",
+  "type": "Input",
+  "textResourceBindings": {
+    "title": "om-innflytter.Input-eCPH9O.title.x2kt"
   }
 }
 ```
 
-Selve teksten ligger i tekstfilen for bokmål, med samme ID som komponenten peker på:
+Selve teksten ligger i tekstfilen for bokmål, med den samme ID-en som komponenten peker på:
 
 {{< code-title >}}
 App/config/texts/resource.nb.json
@@ -290,7 +327,7 @@ App/config/texts/resource.nb.json
 
 ```json
 {
-  "id": "om-innflytter.Input-ECYekc.title.wu6n",
+  "id": "om-innflytter.Input-eCPH9O.title.x2kt",
   "value": "Fullt navn"
 }
 ```
@@ -298,51 +335,49 @@ App/config/texts/resource.nb.json
 ID-ene slutter med tilfeldige tegn, så ID-ene i appen din blir annerledes.
 {{% /expandlarge %}}
 
-#### Legge til resten av skjemakomponentene
+### Legge til resten av skjemafeltene
+
 Du legger til resten av komponentene på samme måte som navnefeltet:
 
-1. Hold musepekeren over komponenten som skal stå foran den nye komponenten, og klikk på **+** som dukker opp under den.
-2. Velg komponenttype fra komponentlisten.
-3. Legg inn ledetekst og velg datamodellfelt.
+1. Hold musepekeren rett under komponenten som skal stå foran den nye komponenten, og klikk på **+**.
+2. Velg komponenten. Finner du den ikke, klikker du på **Vis alle** og søker etter den.
+3. Legg inn ledeteksten og velg datamodellfeltet.
 
-Finner du ikke komponenten du leter etter, klikker du på **Vis alle** og søker etter den.
+Legg til disse komponentene i denne rekkefølgen, etter «Fullt navn»:
 
-Legg til disse komponentene på siden **Om innflytter**, i denne rekkefølgen:
+| Ledetekst     | Komponent      | Datamodellfelt        |
+|---------------|----------------|-----------------------|
+| Alder         | Lite tekstfelt | `person.alder`        |
+| Gateadresse   | Lite tekstfelt | `adresse.gateadresse` |
+| Postnummer    | Lite tekstfelt | `adresse.postnummer`  |
+| Poststed      | Lite tekstfelt | `adresse.poststed`    |
+| E-postadresse | Lite tekstfelt | `kontaktinfo.epost`   |
+| Telefon       | Lite tekstfelt | `kontaktinfo.telefon` |
+| Send inn      | Knapp          | Ingen                 |
 
-| Ledetekst     | Komponent      | Datamodellfelt          |
-|---------------|----------------|-------------------------|
-| Alder         | Lite tekstfelt | `person.alder`          |
-| Gateadresse   | Lite tekstfelt | `adresse.gateadresse`   |
-| Postnummer    | Lite tekstfelt | `adresse.postnummer`    |
-| Poststed      | Lite tekstfelt | `adresse.poststed`      |
-| E-postadresse | Lite tekstfelt | `kontaktinfo.epost`     |
-| Telefon       | Lite tekstfelt | `kontaktinfo.telefon`   |
-| Send inn      | Knapp          | Ingen                   |
+Komponenten **Knapp** sender inn skjemaet når brukeren klikker på den. Den trenger derfor ingen kobling til
+datamodellen.
 
-Komponenten **Knapp** sender inn skjemaet når brukeren klikker på den. Den trenger derfor ingen kobling til datamodellen.
+![Den ferdige skjemasiden i Oppsett](./resten-av-skjemaet.png "Den ferdige skjemasiden")
 
----
+## Teste skjemaet
 
-![Legg til resten av skjemakomponentene](./Kurs-skjermbilder-Oppgave-Resten-av-skjemaet.jpg)
+Forhåndsvisningen i Altinn Studio er midlertidig skrudd av. Klikker du på **Forhåndsvis**, ser du bare en melding om
+dette.
 
-#### Forhåndsvise skjemaet
-Nå kan du se hvordan skjemaet ser ut for brukeren.
+For å teste hele flyten, også innsendingen, må du publisere appen til et testmiljø. Det lærer du i kurset
+[Publiser og test en tjeneste]({{< relref "/altinn-studio/v9/getting-started/development/publish" >}}).
 
-1. Klikk på **Forhåndsvis** i menylinjen.
-2. Forhåndsvisningen starter på infosiden. Klikk på **Neste** for å gå til siden "Om innflytter".
+## Dele endringene
 
-Du kan fylle ut feltene i forhåndsvisningen, men du kan ikke sende inn skjemaet herfra. For å teste hele flyten må du
-publisere appen til et testmiljø.
+Del endringene dine på samme måte som tidligere. Klikk på **Del dine endringer**, beskriv endringene og klikk på
+**Del endringer**.
 
-Klikk på **Til Utforming** for å gå tilbake til utformingen.
+Du har nå laget en app med
 
----
-
-![Ferdig skjema i forhåndsvisningen](./Kurs-skjermbilder-Oppgave-Forhandsvis-skjema.jpg)
-
-#### Dele endringene
-
-Del endringene dine til appens sentrale område på samme måte som tidligere. Klikk på **Del dine endringer** i menylinjen,
-beskriv endringene og klikk på **Del endringer**.
+- navn, beskrivelse og kontaktinformasjon
+- en velkomstside med logo og velkomsttekst
+- en datamodell med gruppene `person`, `adresse` og `kontaktinfo`
+- en skjemaside med sju felter og en knapp for å sende inn skjemaet
 
 Du kan lese mer i [oversikten over komponentene du kan bruke i Altinn Studio]({{< relref "/altinn-studio/v9/develop-a-service/look-and-feel/components" >}}).
