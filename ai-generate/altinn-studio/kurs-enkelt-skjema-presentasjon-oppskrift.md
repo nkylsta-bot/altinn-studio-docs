@@ -18,7 +18,7 @@ De tekniske reglene i kapittel 4 er testet med Slidev 53.1.0 og Hugo 0.162.0, so
 | Hva                | Hvor                                                                                   |
 |--------------------|----------------------------------------------------------------------------------------|
 | Kursartikkel       | `content/altinn-studio/v9/getting-started/development/basic-form/_index.nb.md`         |
-| Skjermbilder       | `.jpg`-filene i samme mappe som kursartikkelen                                          |
+| Skjermbilder       | `.png`-filene i samme mappe som kursartikkelen                                          |
 | Case og læringsmål | `ai-generate/altinn-studio/kurs-enkelt-skjema-playbook.md`                             |
 | **Presentasjon**   | `content/altinn-studio/v9/getting-started/development/basic-form/slides.md`            |
 
@@ -49,7 +49,8 @@ lysbildene og gjør oppgavene i Altinn Studio underveis.
 | I kursartikkelen                              | I presentasjonen                                                                 |
 |-----------------------------------------------|----------------------------------------------------------------------------------|
 | Tittel og beskrivelse i front matter          | Forside med layout `cover`                                                       |
-| (finnes ikke)                                 | Agenda med delene i kurset, og ett lysbilde om caset med kravene fra kommunen     |
+| Læringsmålene i innledningen                  | Lysbildet «Dette lærer du»                                                       |
+| «Dette skal du lage»                          | Ett lysbilde om caset                                                            |
 | Overskrift på nivå 3 (`###`)                  | Seksjonslysbilde med layout `section`                                            |
 | Konseptforklaring                             | Ett lysbilde med 3 til 5 punkter. Resten av teksten blir talernotat.              |
 | Nummererte steg under nivå 4 (`####`)         | Ett lysbilde med stegene forkortet til én linje hver, og med UI-navn i **fet**     |
@@ -58,49 +59,63 @@ lysbildene og gjør oppgavene i Altinn Studio underveis.
 | Merknad i sitat (`>`)                         | Talernotat, eller en kort linje nederst på lysbildet hvis den er viktig            |
 | Sammenleggbar fordypning (`expandlarge`)      | Ett valgfritt lysbilde med kode, merket som fordypning                            |
 | Lenker med `relref`                           | Full URL til docs.altinn.studio, eller fjernes                                     |
-| (finnes ikke)                                 | Avslutning med oppsummering av hva deltakeren har laget, og hva neste modul er      |
+| Oppsummeringen til slutt                      | Ett lysbilde med layout `default` med det deltakeren har laget                    |
+| (finnes ikke)                                 | Siste lysbilde med layout `end`, med bare navnet på neste kurs                    |
 
 ### Forventet lysbildeplan for dagens kurs
 
-Planen bruker alle de 21 skjermbildene i mappen én gang. Hvis kursartikkelen har endret seg, følger du kursartikkelen og
-oppdaterer planen.
+Planen bruker alle de 24 skjermbildene i mappen én gang. Filen `kommune-logo.png` er ikke et skjermbilde, men logoen
+deltakerne lenker til fra Studio. Den skal ikke brukes i presentasjonen. Hvis kursartikkelen har endret seg, følger du
+kursartikkelen og oppdaterer planen.
 
-| #  | Del                     | Innhold                                              | Skjermbilde                                             |
-|----|-------------------------|------------------------------------------------------|---------------------------------------------------------|
-| 1  |                         | Forside                                              |                                                         |
-| 2  |                         | Agenda                                               |                                                         |
-| 3  |                         | Caset: Sogndal kommune og kravene                    |                                                         |
-| 4  | Opprett en ny app       | Seksjon                                              |                                                         |
-| 5  |                         | Steg for å opprette app                              | `Kurs-skjermbilder-Oppgave-Lag-ny-app.jpg`              |
-| 6  | Redigere informasjon    | Seksjon                                              |                                                         |
-| 7  |                         | Oversiktssiden og hva den viser                      | `Kurs-skjermbilder-Konsept-Oversikt-i-appen.jpg`        |
-| 8  |                         | Steg for å endre tittel og beskrivelse               | `Kurs-skjermbilder-Oppgave-Endre-tittel-på-appen.jpg`   |
-| 9  |                         | Tittel på bokmål og nynorsk, oppdatert oversikt       | `Kurs-skjermbilder-Konsept-Oversikt-i-appen-med-tittel.jpg` |
-| 10 | Lagre og dele endringer | Seksjon                                              |                                                         |
-| 11 |                         | Eget område og sentralt område                       | `Kurs-skjermbilder-Konsept-Endringer-og-lagring.jpg`    |
-| 12 |                         | Steg for å dele endringer                            | `Kurs-skjermbilder-Oppgave-Del-endringer.jpg`           |
-| 13 | Lage en informasjonsside| Seksjon                                              |                                                         |
-| 14 |                         | Slik er Utforming bygd opp                           | `Kurs-skjermbilder-Konsept-Utforming.jpg`               |
-| 15 |                         | Steg for å legge til bilde                           | `Kurs-skjermbilder-Oppgave-infoside-bilde-leggtil.jpg`  |
-| 16 |                         | Steg for å legge til avsnitt                         | `Kurs-skjermbilder-Oppgave-infoside-avsnitt-leggtil.jpg`|
-| 17 |                         | Resultat                                             | `Kurs-skjermbilder-Oppgave-infoside-resultat.jpg`       |
-| 18 | Sette opp datamodellen  | Seksjon                                              |                                                         |
-| 19 |                         | Hva en datamodell er                                 | `Kurs-skjermbilder-Konsept-Datamodell.jpg`              |
-| 20 |                         | Krav fra kommunen                                    |                                                         |
-| 21 |                         | Steg for å lage datamodellen                         | `Kurs-skjermbilder - Oppgave-Datamodell.jpg`            |
-| 22 |                         | Ferdig datamodell                                    | `Kurs-skjermbilder - Oppgave-Datamodell-2-resultat.jpg` |
-| 23 |                         | Generere modeller                                    | `Kurs-skjermbilder - Oppgave-Datamodell-generer-modeller.jpg` |
-| 24 |                         | Dele endringene                                      | `Kurs-skjermbilder - Oppgave-Del-endringer-basic.jpg`   |
-| 25 | Utforme skjemaet        | Seksjon                                              |                                                         |
-| 26 |                         | Lag en ny side                                       | `Kurs-skjermbilder-Oppgave-Ny-side.jpg`                 |
-| 27 |                         | Legg til den første komponenten                      | `Kurs-skjermbilder-Oppgave-Legg-til-komponent.jpg`      |
-| 28 |                         | Ledetekst og tekstressurser                          | `Kurs-skjermbilder-Oppgave-Ledetekst.jpg`               |
-| 29 |                         | Knytt feltet til datamodellen                        | `Kurs-skjermbilder-Oppgave-Datamodellfelt.jpg`          |
-| 30 |                         | Fordypning: slik ser feltet ut i filene (valgfri)     |                                                         |
-| 31 |                         | Tabell med resten av komponentene                    | `Kurs-skjermbilder-Oppgave-Resten-av-skjemaet.jpg`      |
-| 32 |                         | Forhåndsvis skjemaet                                 | `Kurs-skjermbilder-Oppgave-Forhandsvis-skjema.jpg`      |
-| 33 |                         | Del endringene                                       |                                                         |
-| 34 |                         | Avslutning og neste modul                            |                                                         |
+| #  | Del                        | Lysbilde                                   | Layout     | Skjermbilde                    |
+|----|----------------------------|--------------------------------------------|------------|--------------------------------|
+| 1  |                            | Lage et enkelt skjema                      | `cover`    |                                |
+| 2  |                            | Dette lærer du                             | `default`  |                                |
+| 3  |                            | Dette skal du lage                         | `default`  |                                |
+| 4  | Opprett en ny app          | Seksjon                                    | `section`  |                                |
+| 5  |                            | Opprett en ny app                          | `two-cols` | `opprett-app.png`              |
+| 6  | Endre informasjonen        | Seksjon                                    | `section`  |                                |
+| 7  |                            | Oversiktssiden                             | `default`  | `oversikt.png`                 |
+| 8  |                            | Se hva som mangler                         | `two-cols` | `valideringsfeil.png`          |
+| 9  |                            | Legg inn navn, beskrivelse og kontaktinformasjon | `default` |                         |
+| 10 |                            | Om appen                                   | `default`  | `innstillinger.png`            |
+| 11 |                            | Ny tittel på oversiktssiden                | `default`  | `oversikt-med-tittel.png`      |
+| 12 | Lagre og dele endringer    | Seksjon                                    | `section`  |                                |
+| 13 |                            | To områder                                 | `default`  | `lagre-og-dele.png`            |
+| 14 |                            | Del endringene                             | `two-cols` | `del-endringer.png`            |
+| 15 | Lage velkomstsiden         | Seksjon                                    | `section`  |                                |
+| 16 |                            | Åpne Utforming                             | `default`  | `utforming-oppgaver.png`       |
+| 17 |                            | Slik er Utforming bygd opp                 | `default`  | `utforming.png`                |
+| 18 |                            | Legg til et bilde                          | `two-cols` | `legg-til-komponent.png`       |
+| 19 |                            | Velg komponent                             | `default`  | `vis-alle-bilde.png`           |
+| 20 |                            | Lim inn adressen                           | `two-cols` | `bilde-url.png`                |
+| 21 |                            | Legg til et avsnitt                        | `two-cols` | `ny-komponent-pluss.png`       |
+| 22 |                            | Skriv velkomstteksten                      | `two-cols` | `avsnitt.png`                  |
+| 23 |                            | Den ferdige velkomstsiden                  | `default`  | `infoside-resultat.png`        |
+| 24 | Sette opp datamodellen     | Seksjon                                    | `section`  |                                |
+| 25 |                            | Hva er en datamodell?                      | `default`  |                                |
+| 26 |                            | Krav fra kommunen                          | `default`  |                                |
+| 27 |                            | Datamodellen du skal lage                  | `default`  |                                |
+| 28 |                            | Åpne datamodellen                          | `default`  | `datamodell.png`               |
+| 29 |                            | Slett eksempelfeltene                      | `default`  | `datamodell-slett.png`         |
+| 30 |                            | Lag den første gruppen                     | `default`  | `datamodell-legg-til-felt.png` |
+| 31 |                            | Gjør ferdig datamodellen                   | `default`  | `datamodell-ferdig.png`        |
+| 32 |                            | Del endringene                             | `default`  |                                |
+| 33 | Utforme skjemasiden        | Seksjon                                    | `section`  |                                |
+| 34 |                            | Lag en ny side                             | `two-cols` | `ny-side.png`                  |
+| 35 |                            | Legg til det første skjemafeltet           | `default`  | `legg-til-tekstfelt.png`       |
+| 36 |                            | Tekster og tekst-ID-er                     | `default`  |                                |
+| 37 |                            | Legg inn ledeteksten                       | `two-cols` | `ledetekst.png`                |
+| 38 |                            | Knytt feltet til datamodellen              | `two-cols` | `datamodellfelt.png`           |
+| 39 |                            | Fordypning: navnefeltet i filene til appen | `default`  |                                |
+| 40 |                            | Legg til resten av skjemafeltene           | `default`  |                                |
+| 41 |                            | Komponentene etter «Fullt navn»            | `default`  |                                |
+| 42 |                            | Den ferdige skjemasiden                    | `default`  | `resten-av-skjemaet.png`       |
+| 43 | Teste skjemaet             | Teste skjemaet                             | `default`  |                                |
+| 44 | Dele endringene            | Del endringene                             | `default`  |                                |
+| 45 |                            | Du har laget en app med                    | `default`  |                                |
+| 46 |                            | Neste kurs: Publiser og test en tjeneste   | `end`      |                                |
 
 ---
 
@@ -159,23 +174,33 @@ Bruk bare innebygde layouter fra standardtemaet:
 | `section`  | Seksjonslysbilde for hver del                      |
 | `default`  | Konsepter, steg, tabeller og store skjermbilder     |
 | `two-cols` | Steg til venstre og skjermbilde til høyre, med `::right::` |
-| `end`      | Siste lysbilde                                     |
+| `end`      | Siste lysbilde, med bare en kort tittel            |
+
+Layouten `end` har mørk bakgrunn. Inline-kode blir hvite bokser, og punktlister står skjevt. Bruk den bare til en
+kort tittel, og legg oppsummeringen på et eget lysbilde med `default`.
 
 Ikke bruk `image`, `image-right` eller `image-left` med relative stier i `image:`. Bildet blir pakket med, men vises ikke
 på lysbildet. Bruk `two-cols` i stedet.
 
 ### Skjermbilder
 
-- **Bruk relative stier** som starter med `./`, for eksempel `./Kurs-skjermbilder-Oppgave-Ny-side.jpg`.
-- **Mellomrom i filnavn** skrives som `%20`, for eksempel `./Kurs-skjermbilder%20-%20Oppgave-Datamodell.jpg`. Ikke
-  endre navnet på filene, fordi kursartikkelen bruker dem.
+- **Bruk relative stier** som starter med `./`, for eksempel `./ny-side.png`.
+- **Mellomrom i filnavn** skrives som `%20`, for eksempel `./mitt%20bilde.png`. Ikke endre navnet på filene, fordi
+  kursartikkelen bruker dem.
 - **Store skjermbilder** settes inn med `<img>` og en høydegrense, ellers blir de kuttet nederst:
 
   ```html
-  <img src="./Kurs-skjermbilder-Oppgave-Ny-side.jpg" class="max-h-100 mx-auto" alt="Lag en ny side" />
+  <img src="./ny-side.png" class="max-h-96 mx-auto" alt="Lag en ny side" />
   ```
 
-  Bruk vanlig markdown-bilde bare i en kolonne i `two-cols`, der bildet blir skalert etter bredden.
+  Disse høydene passer:
+
+  - `max-h-96` for et skjermbilde alene under overskriften
+  - `max-h-112` i høyre kolonne i `two-cols`
+  - `max-h-56` til `max-h-72` for et bredt skjermbilde under steg eller punkter
+
+  Bruk `two-cols` bare for høye eller kvadratiske skjermbilder. Brede skjermbilder blir for små i en kolonne, så legg
+  dem under stegene med layouten `default`. Hold overskriften kort, ellers går den inn i bildet i høyre kolonne.
 - **Skriv alt-tekst** som sier hva bildet viser.
 - **Fjern Marp-direktiver** fra alt-teksten, som `bg right:60% contain`, `h:620px` og `?width=300`.
 
@@ -223,8 +248,8 @@ npx -y -p @slidev/cli -p @slidev/theme-default slidev build \
 Sjekk dette før du leverer:
 
 1. **Bygget går uten feil.** Feilen `resolves outside of Vite server.fs.allow` betyr at en sti peker ut av mappen.
-2. **Alle skjermbildene er med.** Antall `.jpg`-filer i `assets/` i den bygde presentasjonen skal være likt antallet
-   skjermbilder du har brukt.
+2. **Alle skjermbildene er med.** Antall `.png`-filer i `assets/` i den bygde presentasjonen skal være én mer enn
+   antallet skjermbilder du har brukt. Den ekstra filen er logoen til Slidev, `logo-<hash>.png`.
 3. **Ingen lysbilder mangler.** Antallet lysbilder skal stemme med lysbildeplanen.
 4. **Ingen bilder er kuttet.** Se gjennom alle lysbildene i forhåndsvisningen.
 5. **Hugo publiserer ikke presentasjonen.** Etter `hugo` skal ingen fil i `public/` inneholde tekst som bare finnes i
