@@ -4,6 +4,8 @@ title: Lage et enkelt skjema
 info: Altinn Studio – kom i gang
 routerMode: hash
 exportFilename: altinn-studio-lage-et-enkelt-skjema
+fonts:
+  sans: Inter
 build:
   render: never
   list: never
@@ -14,6 +16,12 @@ layout: cover
 # Lage et enkelt skjema
 
 Altinn Studio – kom i gang
+
+<style>
+:global(.slidev-layout:not(.end)) {
+  color: #212B3B;
+}
+</style>
 
 <!--
 I dette kurset lager deltakerne sin første app i Altinn Studio. De starter med en tom app og ender med et skjema med to
