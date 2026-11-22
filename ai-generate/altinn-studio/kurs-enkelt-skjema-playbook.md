@@ -118,6 +118,10 @@ Komponenter, i denne rekkefølgen:
 Bruk komponentnavnene slik de heter i grensesnittet når kurset skrives. I dagens versjon heter tekstfeltet
 «Lite tekstfelt» og knappen «Knapp».
 
+Kurset skal bruke det nye grensesnittet for å legge til komponenter. Deltakeren skrur det på med bryteren
+**Prøv nytt design** øverst til høyre i Utforming. Ikke beskriv dra og slipp fra komponentlisten i det gamle designet.
+Når det nye designet blir standard og bryteren forsvinner, fjerner du steget som skrur den på.
+
 Navigasjon mellom sidene (Neste/Forrige) skal finnes. Hvis Studio ikke legger den til automatisk, skal deltakeren legge
 den til.
 
@@ -162,11 +166,12 @@ deltakeren kan sjekke mot. Rekkefølgen er pedagogisk begrunnet og bør beholdes
 - **Mål:** Deltakeren har bygget en side med informasjonskomponenter.
 - **Deltakeren gjør:**
   1. Åpner verktøyet for å utforme skjemaet, for utfyllingsoppgaven.
-  2. Åpner den første siden og legger til et bilde med kommunelogoen fra URL.
-  3. Legger til et avsnitt med velkomstteksten.
-- **Forklar:** Hvordan utformingsverktøyet er bygd opp, for eksempel komponentliste, sideoppsett, innstillinger for valgt
-  element og forhåndsvisning. Beskriv panelene slik de er i gjeldende versjon. Vis hvordan man finner en komponent man
-  ikke ser med en gang.
+  2. Skrur på det nye grensesnittet for å legge til komponenter, med bryteren **Prøv nytt design** øverst til høyre.
+  3. Åpner den første siden og legger til et bilde med kommunelogoen fra URL.
+  4. Legger til et avsnitt med velkomstteksten.
+- **Forklar:** Hvordan utformingsverktøyet er bygd opp, for eksempel sideoppsett, innstillinger for valgt element og
+  forhåndsvisning. Beskriv panelene slik de er i gjeldende versjon, med det nye designet slått på. Vis hvordan man finner
+  en komponent man ikke ser med en gang.
 - **Resultat:** Forhåndsvisningen viser logo og velkomsttekst.
 
 ### Del 5: Lag datamodellen
