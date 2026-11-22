@@ -133,6 +133,8 @@ title: Lage et enkelt skjema
 info: Altinn Studio – kom i gang
 routerMode: hash
 exportFilename: altinn-studio-lage-et-enkelt-skjema
+fonts:
+  sans: Inter
 build:
   render: never
   list: never
@@ -141,9 +143,25 @@ layout: cover
 ---
 
 # Lage et enkelt skjema
+
+Altinn Studio – kom i gang
+
+<style>
+:global(.slidev-layout:not(.end)) {
+  color: #212B3B;
+}
+</style>
 ```
 
 Headmatteren er også frontmatter for forsiden. Derfor står `layout: cover` her, og forsidens innhold kommer rett etter.
+
+Alle presentasjonene bruker fonten Inter og tekstfargen `#212B3B`:
+
+- **Fonten** setter du med `fonts` i headmatteren. Slidev henter Inter fra Google Fonts, så nettleseren må ha
+  nettilgang når presentasjonen vises.
+- **Tekstfargen** setter du med `<style>`-blokken på forsiden. `:global` gjør at den gjelder alle lysbildene, også når
+  presentasjonen åpnes direkte på et senere lysbilde. Layouten `end` beholder sin lyse tekst på mørk bakgrunn.
+- **Ikke bruk `style.css`.** Filen måtte ligget i kursmappen, og da publiserer Hugo den sammen med kursartikkelen.
 
 `routerMode: hash` gjør at den bygde presentasjonen fungerer uansett hvilken mappe den publiseres i.
 
